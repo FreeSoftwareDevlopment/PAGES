@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+    color: red;
+    padding: 1%;
+    width: 200px;
+    margin: 1;
+}
+div {
+    color: #F1F3F4;
+    height: 300px;
+    position: absolute;
+    top: 200px;
+    width: 950px;
+  }
+a {
+    background-color: black;
+    color: red;
+}
