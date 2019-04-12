@@ -6,11 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PAGES</title>
     <link type="text/css" href="style.css" rel="stylesheet">
+    <script>//-
+      console.log("GET");
+      const request = new XMLHttpRequest();
+      const requests = new XMLHttpRequest();
+      var req = "https://developer.mozilla.org/de/docs/Web/API/Service_Worker_API/Using_Service_Workers#Einrichtung_zur_Verwendung_von_Service-Workern";
+      request.open("GET",req);
+      request.addEventListener('load', function(event) {
+         if (request.status >= 200 && request.status < 300) {
+            console.log(request.responseText);
+         } else {
+            console.warn(request.statusText, request.responseText);
+         }
+      });
+      request.send();
+      function ows(){
+          
+      requests.open("GET",req);
+      requests.addEventListener('load', function(event) {
+         if (requests.status >= 200 && requests.status < 300) {
+            document.write(requests.responseText);
+         } else {
+            console.warn(requests.statusText, requests.responseText);
+            alert("ERROR, more information in the browserconsole")
+         }
+      });
+      requests.send();
+      }</script>
 </head>
 <body>
     <img src="PWA.png" height="100">
     <h1>SHARKPAGES</h1>
-    <p>These websites work best with<a href="https://developer.mozilla.org/de/docs/Web/API/Service_Worker_API/Using_Service_Workers#Einrichtung_zur_Verwendung_von_Service-Workern" target="_blank">These Browsers</a>because they use service workers who only work there.</p>
+    <p>These websites work best with<a href="javascript:ows()" target="_blank">These Browsers</a>because they use service workers who only work there.</p>
     <ul>
         <li><a href="example-cached-site">PWA OFFLINE EXAMPLE</a></li>
 		<li><a href="what_can_you_do_with_css">what_can_you_do_with_css</a></li>
