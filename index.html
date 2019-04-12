@@ -15,9 +15,14 @@
         <li><a href="example-cached-site">PWA OFFLINE EXAMPLE</a></li>
     </ul>
     <script>
+	if(navigator.userAgent.indexOf("Firefox") != -1 ){
+	if('serviceWorker' in navigator){
+            serviceWorkerContainer.register('./sw.js');
+        }
+	}else{
         if('serviceWorker' in navigator){
             navigator.serviceWorker.register('./sw.js');
-        }
+        }}
      </script>
 </body>
 </html>
