@@ -1,0 +1,13 @@
+{
+    "short_name": "PAGES SHARK",
+    "name": "Pages Sharkbyte",
+    "icons": [
+        {
+            "src": "PWA.png",
+            "sizes": "150x150",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone"
+}
