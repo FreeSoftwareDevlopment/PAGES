@@ -1,40 +1,85 @@
-var CACHE_NAME = 'sharkpages'
-var cads = [
-          '/152.png',
-          '/192.png',
-          '/PWA.png',
-          '/style.css',
-          '/index.html',
-		  '/PAGES',
-          '/example-cached-site/',
-          '/example-cached-site/index.html',
-          '/example-cached-site/sw.js',
-          '/what_can_you_do_with_css/index.html',
-          '/what_can_you_do_with_css/',
-          '/what_can_you_do_with_css/LANDSCAPE.svg',
-          '/what_can_you_do_with_css/PWA.png',
-          '/what_can_you_do_with_css/Snowman.gif',
-          '/what_can_you_do_with_css/sw.js',
-          '/'
-];
-self.addEventListener('install', function(event){
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-    .then(function(cache){
-      console.log("MAKING WEBPAGE FASTER");
-      return cache.addAll(cads);
-    })
-  );
+/**
+ * Welcome to your Workbox-powered service worker!
+ *
+ * You'll need to register this file in your web app and you should
+ * disable HTTP caching for this file too.
+ * See https://goo.gl/nhQhGp
+ *
+ * The rest of the code is auto-generated. Please don't update this file
+ * directly; instead, make changes to your Workbox build configuration
+ * and re-run your build process.
+ * See https://goo.gl/2aRDsh
+ */
+
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.2.0/workbox-sw.js");
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
-self.addEventListener('fetch', function(event){
-	event.respondWith(
-	   caches.match(event.request)
-	   .then(function(response){
-		   if(response){
-			   return response;
-		   }
-		   return fetch(event.request);
-	   }
-	   );
-	)
-});
+
+/**
+ * The workboxSW.precacheAndRoute() method efficiently caches and responds to
+ * requests for URLs in the manifest.
+ * See https://goo.gl/S9QRab
+ */
+self.__precacheManifest = [
+  {
+    "url": "152.png",
+    "revision": "63358f7c7d9e8da3da79751628be7446"
+  },
+  {
+    "url": "192.png",
+    "revision": "6a541f6afd8494b08326510f77c36fe3"
+  },
+  {
+    "url": "example-cached-site/index.html",
+    "revision": "e76d371fed9098386e666e89d4d6edb4"
+  },
+  {
+    "url": "example-cached-site/main.css",
+    "revision": "f07252cdedd55d2bf7f8d499f317dd29"
+  },
+  {
+    "url": "example-cached-site/main.js",
+    "revision": "f1a54bc31857599f7b3a5b441dcd3b05"
+  },
+  {
+    "url": "example-cached-site/swtest/index.html",
+    "revision": "cca12a55c9782c25381c7838b863a98e"
+  },
+  {
+    "url": "index.html",
+    "revision": "0576bcb3c068ac4f1b0073b5b13d4684"
+  },
+  {
+    "url": "manifest.json",
+    "revision": "9aa94fe4d378a0d7a0efc529852a405f"
+  },
+  {
+    "url": "PWA.png",
+    "revision": "e8cddfa25575486b116b57385f12ec6b"
+  },
+  {
+    "url": "style.css",
+    "revision": "92b623936d05c374b7df8adaab33bf33"
+  },
+  {
+    "url": "what_can_you_do_with_css/index.html",
+    "revision": "9ae4956d1966b67fc9ac336aa9dcb284"
+  },
+  {
+    "url": "what_can_you_do_with_css/LANDSCAPE.svg",
+    "revision": "f31af35b7f0cd93806ffac86d12accd3"
+  },
+  {
+    "url": "what_can_you_do_with_css/PWA.png",
+    "revision": "e8cddfa25575486b116b57385f12ec6b"
+  },
+  {
+    "url": "what_can_you_do_with_css/Snowman.gif",
+    "revision": "c5abb891b969b2bf456ddd1785e9e4a0"
+  }
+].concat(self.__precacheManifest || []);
+workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
