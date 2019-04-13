@@ -1,6 +1,7 @@
 {
     "short_name": "PAGES SHARK",
     "name": "Pages Sharkbyte",
+	"scope": "/",
     "icons": [
         {
             "src": "PWA.png",
@@ -20,5 +21,11 @@
     ],
     "start_url": "/",
     "display": "standalone",
+	"background-color": "red",
+	"serviceworker":{
+	   "src": "sw.js",
+	   "scope": "/",
+	   "update_via_cache": "none"
+	}
 	"installable": true
 }
