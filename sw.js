@@ -38,10 +38,6 @@ self.__precacheManifest = [
     "revision": "3f74cdce369099c0ba0decff1799ec26"
   },
   {
-    "url": "PAGES/index.html",
-    "revision": "d41d8cd98f00b204e9800998ecf8427e"
-  },
-  {
     "url": "PWA.png",
     "revision": "e8cddfa25575486b116b57385f12ec6b"
   },

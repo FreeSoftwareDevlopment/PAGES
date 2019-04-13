@@ -1,7 +1,7 @@
 {
     "short_name": "PAGES SHARK",
     "name": "Pages Sharkbyte",
-	"scope": "/",
+	"scope": "/PAGES/",
     "icons": [
         {
             "src": "PWA.png",
