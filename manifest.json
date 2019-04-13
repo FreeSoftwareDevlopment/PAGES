@@ -21,10 +21,5 @@
     ],
     "start_url": "/",
     "display": "standalone",
-	"background-color": "red",
-	"serviceworker":{
-	   "src": "sw.js",
-	   "scope": "/",
-	   "update_via_cache": "none"
-	}
+	"background-color": "red"
 }
