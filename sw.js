@@ -19,7 +19,7 @@ var cads = [
 ];
 self.addEventListener('install', function(event){
   event.waitUntil(
-    caches.open(CACHE_NAME);
+    caches.open(CACHE_NAME)
     .then(function(cache){
       console.log("MAKING WEBPAGE FASTER");
       return cache.addAll(cads);
