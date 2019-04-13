@@ -26,6 +26,6 @@
 	   "src": "sw.js",
 	   "scope": "/",
 	   "update_via_cache": "none"
-	}
+	},
 	"installable": true
 }
