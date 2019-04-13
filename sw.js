@@ -5,6 +5,7 @@ var cads = [
           '/PWA.png',
           '/style.css',
           '/index.html',
+		  '/PAGES',
           '/example-cached-site/',
           '/example-cached-site/index.html',
           '/example-cached-site/sw.js',
