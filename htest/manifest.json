@@ -1,0 +1,20 @@
+{
+    "short_name": "HTEST",
+    "name": "HTML Document Test for own HTML Snippets",
+	"scope": "/PAGES/htest/",
+    "icons": [
+		{
+            "src": "192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+		{
+            "src": "152.png",
+            "sizes": "152x152",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/PAGES/htest/",
+    "display": "standalone",
+	"background-color": "#c31c4a"
+}
