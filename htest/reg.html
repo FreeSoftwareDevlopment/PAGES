@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>REG</title>
+  </head>
+  <body>
+<h1><a href="shark">serviceWorker Test</a></h1>
+    <script type="text/javascript">
+    if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('./fetch.js');
+    }
+  </body>  </script>
+</html>
