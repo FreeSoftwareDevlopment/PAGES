@@ -14,6 +14,7 @@
             "type": "image/png"
         }
     ],
+    "theme_color": "#ff4600",
     "start_url": "/PAGES/htest/",
     "display": "standalone",
 	"background-color": "#c31c4a"
