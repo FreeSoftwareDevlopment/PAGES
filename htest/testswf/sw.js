@@ -6,6 +6,6 @@ self.addEventListener('fetch', event => {
 event.respondWith(
   new Response(htmlc, {
     headers: {'Content-Type': 'text/html'}
-  }))
+  }));
 }
 });
