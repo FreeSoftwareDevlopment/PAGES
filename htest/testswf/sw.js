@@ -2,7 +2,10 @@ var htmlc = '<body><title>Sharkbyte</title><style>body {color: blue; background-
 self.addEventListener('fetch', event => {
   console.log('event ', event.request);
   if(event.request.url.endsWith('/shark')){
-    proxy(htmlc, 'text/html')
+    event.respondWith(
+      new Response(htmlc, {
+        headers: {'Content-Type': 'text/html'}
+      }));
 }
 
 });/*
@@ -11,9 +14,3 @@ event.respondWith(
     headers: {'Content-Type': 'text/html'}
   }));
 */
-function proxy(code, mimet){
-  event.respondWith(
-    new Response(code, {
-      headers: {'Content-Type': mimet}
-    }));
-}
