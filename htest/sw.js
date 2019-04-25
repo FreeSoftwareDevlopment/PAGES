@@ -26,10 +26,6 @@ self.addEventListener('message', (event) => {
  */
 self.__precacheManifest = [
   {
-    "url": "3rdpartylicenses.txt",
-    "revision": "2c949fe0011db9e97caee976d471b1dd"
-  },
-  {
     "url": "assets/152.png",
     "revision": "2b36db9b86bd1e18e469711783989bd3"
   },
@@ -143,7 +139,7 @@ self.__precacheManifest = [
   },
   {
     "url": "workbox-config.js",
-    "revision": "fdb945b28edc0e0f385d7ab030911d72"
+    "revision": "04188d0efcfcb5fd0352475e3bce83b4"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
