@@ -9,4 +9,9 @@ function proxy(htmlco){
   new Response(htmlco, {
     headers: {'Content-Type': 'text/html'}
   }));
+}function css(){
+  event.respondWith(
+  new Response("body{color: blue; background-color: black;}", {
+    headers: {'Content-Type': 'text/css'}
+  }));
 }
