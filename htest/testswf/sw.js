@@ -2,8 +2,9 @@ var htmlc = '<body><title>Sharkbyte</title><style>body {color: blue; background-
 self.addEventListener('fetch', event => {
   console.log('event ', event.request);
   if(event.request.url.endsWith('/shark')){
-    event.respondWith(
-    new Response(htmlc, {
-      headers: {'Content-Type': 'text/html'}
-    }));
+    console.log("Caught a fetch!");
+event.respondWith(
+  new Response(htmlc, {
+    headers: {'Content-Type': 'text/html'}
+  })
 }}});
