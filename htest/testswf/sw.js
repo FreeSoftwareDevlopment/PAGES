@@ -2,16 +2,11 @@ var htmlc = '<body><title>Sharkbyte</title><style>body {color: blue; background-
 self.addEventListener('fetch', event => {
   console.log('event ', event.request);
   if(event.request.url.endsWith('/shark')){
-  proxy(htmlc);
-}});
-function proxy(htmlco){
-  event.respondWith(
-  new Response(htmlco, {
-    headers: {'Content-Type': 'text/html'}
-  }));
-}function css(){
-  event.respondWith(
-  new Response("body{color: blue; background-color: black;}", {
-    headers: {'Content-Type': 'text/css'}
-  }));
-}
+    event.respondWith(
+    new Response(htmlc, {
+      headers: {'Content-Type': 'text/html'}
+    }));
+}if(event.request.url.endsWith('/style.css')){event.respondWith(
+new Response("body{color: blue; background-color: black;}", {
+  headers: {'Content-Type': 'text/css'}
+}));}});
