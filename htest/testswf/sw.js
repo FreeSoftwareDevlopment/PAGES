@@ -6,7 +6,4 @@ self.addEventListener('fetch', event => {
     new Response(htmlc, {
       headers: {'Content-Type': 'text/html'}
     }));
-}if(event.request.url.endsWith('/style.css')){event.respondWith(
-new Response("body{color: blue; background-color: black;}", {
-  headers: {'Content-Type': 'text/css'}
-}));}});
+}}});
