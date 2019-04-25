@@ -22,7 +22,7 @@
       });
       request.send();
       function ows(){
-          
+
       requests.open("GET",req);
       requests.addEventListener('load', function(event) {
          if (requests.status >= 200 && requests.status < 300) {
@@ -44,9 +44,10 @@
 		<li><a href="what_can_you_do_with_css">what_can_you_do_with_css</a></li>
       <li><a href="ang">Angular Starter App</a></li>
 	  <li><a href="mat">Angular Material Test App</a></li>
-		<li><a href="wallracepaint">Wallracepaint</a></li><li><a href="rtest">Routingtest</a></li>
+		<li><a href="wallracepaint">Wallracepaint</a></li>
+    <li><a href="htest/testswf">Service Worker test</a></li><li><a href="rtest">Routingtest</a></li>
     </ul>
-    <script>	
+    <script>
         if('serviceWorker' in navigator){
             navigator.serviceWorker.register('./sw.js');
         }
