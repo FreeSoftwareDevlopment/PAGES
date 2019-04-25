@@ -47,7 +47,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "8ed4015090595da3f846fe4c9bfa4bcc"
+    "revision": "dcc1af50f5af4cbc93a2da39dcc0d699"
   },
   {
     "url": "main.64d4f799e37c878a9192.js",
@@ -140,6 +140,10 @@ self.__precacheManifest = [
   {
     "url": "testswf/shark/index.html",
     "revision": "d0376c5ad08ab281b08537b612315041"
+  },
+  {
+    "url": "workbox-config.js",
+    "revision": "fdb945b28edc0e0f385d7ab030911d72"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
