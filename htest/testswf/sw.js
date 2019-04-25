@@ -5,10 +5,6 @@ self.addEventListener('fetch', event => {
     proxy(htmlc, 'text/html')
 }
 
-if(event.request.url.endsWith('/style.css)){
-  proxy("body,a {color: blue; background-color: black;}", 'text/css')
-}
-
 });/*
 event.respondWith(
   new Response(htmlc, {
