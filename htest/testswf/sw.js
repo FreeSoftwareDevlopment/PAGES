@@ -2,10 +2,22 @@ var htmlc = '<body><title>Sharkbyte</title><style>body {color: blue; background-
 self.addEventListener('fetch', event => {
   console.log('event ', event.request);
   if(event.request.url.endsWith('/shark')){
-    console.log("Caught a fetch!");
+    proxy(htmlc, 'text/html')
+}
+
+if(event.request.url.endsWith('/style.css)){
+  proxy("body,a {color: blue; background-color: black;}", 'text/css')
+}
+
+});/*
 event.respondWith(
   new Response(htmlc, {
     headers: {'Content-Type': 'text/html'}
   }));
+*/
+function proxy(code, mimet){
+  event.respondWith(
+    new Response(code, {
+      headers: {'Content-Type': mimet}
+    }));
 }
-});
